@@ -1,9 +1,8 @@
-# How to show ToolTip with image and text in WinForms DataGrid (SfDataGrid)?
+# How to Show ToolTip with Image and Text in WinForms DataGrid?
 
-## About the sample.
-This sample illustrates that how to show ToolTip with image and text in WinForms DataGrid (SfDataGrid).
+This sample illustrates that how to show ToolTip with image and text in [WinForms DataGrid](https://www.syncfusion.com/winforms-ui-controls/datagrid) (SfDataGrid).
 
-By default, the Tooltip for grid cells will be loaded with CellValue text. To add image in tooltip with existing text, the ToolTipOpening event can be used. In that event, the ToolTipInfo for the items can be updated with image.
+By default, the Tooltip for grid cells will be loaded with `CellValue` text. To add image in tooltip with existing text, the `ToolTipOpening` event can be used. In that event, the `ToolTipInfo` for the items can be updated with image.
 
 ```C#
 //Event subscription
@@ -22,13 +21,11 @@ private void SfDataGrid1_ToolTipOpening(object sender, ToolTipOpeningEventArgs e
     {
         if (record.CustomerID == "FRANS")
         {
-          e.ToolTipInfo.Items[1].Text = "FRANS";                        
-          e.ToolTipInfo.Items[0].Image = Image.FromFile(@"../../Images/FRANS.png");
-          }
+            e.ToolTipInfo.Items[1].Text = "FRANS";                        
+            e.ToolTipInfo.Items[0].Image = Image.FromFile(@"../../Images/FRANS.png");
+        }
     }
 }
 ```
-## Requirements to run the demo
-Visual Studio 2015 and above versions
 
-![Image in tooltip](Image%20in%20tooltip.png)
+![DataGrid showing Tooltip with Image and Text](TooltipWithImageAndText.png)
